@@ -31,7 +31,27 @@ System.out.println("Pop :");
         }
 }
 
+   static void stack_peek(Stack<Integer> stack)
+    {
+        Integer element = (Integer) stack.peek();
+        System.out.println("Element on stack top : " + element);
+    }
+  
+  static void stack_search(Stack<Integer> stack, int element)
+    {
+        Integer pos = (Integer) stack.search(element);
+ 
+        if(pos == -1)
+            System.out.println("Element not found");
+        else
+            System.out.println("Element is found at position " + pos);
+    }
 
-
+public static void main (String[] args)
+    {
+        Stack<Integer> stack = new Stack<Integer>();
+ 
+        stack_push(stack);
+}
 
 }
